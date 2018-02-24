@@ -16,11 +16,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .views import home, hospital
-
+from django.conf.urls.static import static
+from .settings import DEBUG,BASE_DIR
+import os
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hospital/', hospital),
-    path('/',home)
-]
+    path('',home)
+] \
+              + static('css/',document_root=os.path.join(BASE_DIR,'css')) \
+              + static('fonts/',document_root=os.path.join(BASE_DIR,'fonts')) \
+              + static('js/',document_root=os.path.join(BASE_DIR,'js'))\
+              + static('img/',document_root=os.path.join(BASE_DIR,'img'))
+
+
+

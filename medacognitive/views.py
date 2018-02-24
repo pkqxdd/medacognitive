@@ -8,4 +8,5 @@ def home(request):
 
 
 def hospital(request):
-    pass
+    return render(request,'hospital-landing.html')
+
