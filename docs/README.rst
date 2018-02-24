@@ -90,7 +90,7 @@ Doctor Object
 Medicine Object
 ===============
 
-:attricutes:
+:attributes:
   :id: int, ID of the medicine
   :name: str, Name of the medicine
   :num_left: int, Number of doses left
@@ -104,7 +104,7 @@ Medicine Object
     :input: None
     :returns: a string 
   :from_string: 
-    :input: a strnig
+    :input: A single string in JSON format, contains everything in attributes
     :returns: a Medicine object
     
 
