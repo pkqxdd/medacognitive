@@ -15,21 +15,21 @@ How to Run Server
 API Docs
 ========
 
-:Description: Blank 
-:Location: https://rxnav.nlm.nih.gov/REST/approximateTerm?term=value&maxEntries=yyy
+:Description: Get RXCUI from Medicine Name
+:Location: https://rxnav.nlm.nih.gov/REST/rxcui?name=value&search=1
 :Method: GET
 :Return: application/xml
 
 ---------------------
 
-:Decription: Blank
-:Location: https://rxnav.nlm.nih.gov/REST/interaction/list?rxcuis=value
+:Description: Get interactions between Medicines
+:Location: https://rxnav.nlm.nih.gov/REST/interaction/list?rxcuis=value+value+...
 :Method: GET
 :Return: application/xml
 
 ---------------------
 
-:Decription: Patient 
+:Description: Patient
 :Location: /patient/?name=PatientName
 :Method: GET
 :template: patient-landing.html
