@@ -44,13 +44,13 @@ def hospital(request):
     return render(request,'hospital-landing.html')
 
 def patient_profile(request):
+
     try:
-        try:
-            patient_id=int(request.GET['id'])
-            patient=Patient.objects.get(id=patient_id)
-        except Patient.DoesNotExist:
-            return Http404("Patient record with ID %d does not exist"%patient_id)
-    except:
-        return Http404("Improperly formatted request")
+        patient_id=int(request.GET['id'])
+        patient=Patient.objects.get(id=patient_id)
+    except Patient.DoesNotExist:
+        raise Http404("Patient record with ID %d does not exist"%patient_id)
+    except Exception as msg:
+        raise Http404("Improperly formatted request: %s" % msg)
     
     return render(request,'patient-profile.html',context={patient:patient})
