@@ -56,10 +56,11 @@ API Docs
 :Description: Update a medicine. Replace whatever is in the database with the incoming data
 :Location: /update
 :Method: POST
-:Accept: application/json
+:Accept: 
+  :Type: application/json
   :Fields:
     :patient_id: patient's id
-    :med: the data to be replaced with
+    :med: the data to be replaced with, see the format below
 :Response:
   :Type: text/plain
   :Content: success
@@ -89,7 +90,7 @@ Doctor Object
 Medicine Object
 ===============
 
-:attricutes:
+:attributes:
   :id: int, ID of the medicine
   :name: str, Name of the medicine
   :num_left: int, Number of doses left
@@ -103,7 +104,7 @@ Medicine Object
     :input: None
     :returns: a string 
   :from_string: 
-    :input: a strnig
+    :input: A single string in JSON format, contains everything in attributes
     :returns: a Medicine object
     
 
