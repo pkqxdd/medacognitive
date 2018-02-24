@@ -26,7 +26,7 @@ urlpatterns = [
     path('hospital/', hospital),
     path('patient/',patient_profile),
     path('doctor/patient/',doctor_patient),
-    path('doctor',doctor_profile),
+    path('doctor/',doctor_profile),
     path('',home)
 ] \
               + static('css/',document_root=os.path.join(BASE_DIR,'css')) \
