@@ -30,7 +30,7 @@ API Docs
 ---------------------
 
 :Description: Patient profile from a patient's view 
-:Location: /patient/?name=PatientName
+:Location: /patient/?id=PatientID
 :Method: GET
 :template: patient-landing.html
 :Return: text/html
@@ -38,7 +38,7 @@ API Docs
 ---------------------
 
 :Decription: Doctor's view
-:Location: /doctor/?name=doctorName
+:Location: /doctor/?id=patientID
 :Method: GET
 :template: hospital-landing.html
 :Return: text/html
@@ -46,7 +46,7 @@ API Docs
 ---------------------
 
 :Decription: Patient profile from a doctor's view 
-:Location: /doctor/patient/?name=PatientName
+:Location: /doctor/patient/?id=PatientID
 :Method: GET
 :template: hospital-profile.html
 :Return: text/html
