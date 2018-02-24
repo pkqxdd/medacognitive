@@ -37,7 +37,11 @@ body{
     font-weight: 400;
 	font-size: 80px;
 	padding: 0 5px;
-	color: #000000;
+	color: #6d6c6c;
+}
+
+.hide{
+	display:none;
 }
 
 @media screen and (max-width: 60.625em){
@@ -45,12 +49,3 @@ body{
         width:100%;
     }
 }
-
-/*#search-wrap{*/
-/*    position: relative;*/
-/*}*/
-/*@media screen and (max-width: 60.625em){*/
-/*    #search-wrap{*/
-/*        width:100%;*/
-/*    }*/
-/*}*/

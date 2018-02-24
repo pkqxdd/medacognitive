@@ -9,6 +9,10 @@
 	<link rel="stylesheet" type="text/css" href="/css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="/css/demo.css" />
 	<link rel="stylesheet" type="text/css" href="/css/component.css" />
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/normalizeB.css" />
+	<link rel="stylesheet" type="text/css" href="/css/demoB.css" />
+	<link rel="stylesheet" type="text/css" href="/css/componentB.css" />
 	<!--[if IE]>
   	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -112,12 +116,35 @@
 			</div><!-- /morphsearch -->
 		</div>
 	</div>
-	<div id="main"></div>
+			<div id="container" class="container">
+			
+			<section class="demo-2">
+				<div class="grid">
+					{%for patient in doctor.patients.all%}
+						<div class="box">
+							<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+								<line class="top" x1="0" y1="0" x2="900" y2="0"/>
+								<line class="left" x1="0" y1="460" x2="0" y2="-920"/>
+								<line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
+								<line class="right" x1="300" y1="0" x2="300" y2="1380"/>
+							</svg>
+							<h3>J</h3>
+							<span>{{patient.first_name}}</span>
+							<span>Walnut, Pineapple</span>
+						</div>
+					{%endfor%}
+					
+					
+				</div><!-- /grid -->
+			</section>
+
+		</div><!-- /container -->
 	<div id="footer"></div>
-			<div class="overlay"></div>
-		<script src="/js/classie.js"></script>
-		<script>
+	<div class="overlay"></div>
+	<script src="/js/classie.js"></script>
+	<script>
 			(function() {
+			    var cont = document.getElementById( 'container' )
 				var morphSearch = document.getElementById( 'morphsearch' ),
 					input = morphSearch.querySelector( 'input.morphsearch-input' ),
 					ctrlClose = morphSearch.querySelector( 'span.morphsearch-close' ),
@@ -144,9 +171,13 @@
 							}
 							
 							input.blur();
+							classie.remove( cont, 'hide');
 						}
 						else {
 							classie.add( morphSearch, 'open' );
+							setTimeout(function() {
+									classie.add( cont, 'hide');
+								}, 500);
 						}
 						isOpen = !isOpen;
 					};
