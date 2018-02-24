@@ -10,7 +10,7 @@ How to Run Server
 #. :code:`$ ./manage.py runserver`
 #. Goto 127.0.0.1:8000
 
-
+{"patient_id":"1", "rxcui":"1", "name":"temp", "num_left":"3", "last_taken_time":"2002-03-11 00:00:00", "next_take_time":"2002-03-11 00:00:00", "taken":"1", "dosage":"3"}
 
 API Docs
 ========
