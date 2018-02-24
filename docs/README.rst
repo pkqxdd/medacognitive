@@ -62,6 +62,16 @@ API Docs
 :Response:
   :Type: text/plain
   :Content: success
+  
+----------------------
+
+
+:Description: Get a json formatted information of meds of a patient
+:Location: /meds/?id=patientID
+:Method: GET
+:Response:
+  :Type: application/json
+  :Content: Serialized Meds object
 
 
 
