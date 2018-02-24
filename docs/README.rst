@@ -18,6 +18,8 @@ API Docs
 :Location: https://rxnav.nlm.nih.gov/REST/approximateTerm?term=value&maxEntries=yyy
 :Method: GET
 :Return: application/xml
+
+:Decripti
 :Location: https://rxnav.nlm.nih.gov/REST/interaction/list?rxcuis=value
 :Method: GET
 :Return: application/xml
