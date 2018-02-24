@@ -48,8 +48,49 @@ API Docs
 :Decription: Doctor 
 :Location: /doctor/patient/?name=PatientName
 :Method: GET
-:template: hospital-patient.html
+:template: hospital-profile.html
 :Return: text/html
+
+Patient Object
+--------------
+
+:attributes:
+  :id: ID of the patient, start from 0
+  :first_name: str
+  :last_name: str
+  :med: A list of Medicine object, see below
+:methods: None
+
+Doctor Object
+-------------
+
+:attributes:
+  :id: ID of the patient, start from 0
+  :first_name: str
+  :last_name: str
+  :patients: A list of Patient object, see above
+:methods: None
+
+Medicine Object
+---------------
+
+:attricutes:
+  :name: str, Name of the medicine
+  :num_left: int, Number of doses left
+  :dosage: str, dosage
+  :last_taken_time: Datetime object, last time a patient took a medicine
+  :next_take_time: Datetime object, next time a patient take a medicine
+  :taken: boolean, if the patient took the medicine at last_time_taken
+  
+:methods:
+  :to_string:
+    :input: None
+    :returns: a string 
+  :from_string: 
+    :input: a strnig
+    :returns: a Medicine object
+    
+
 
 
 
