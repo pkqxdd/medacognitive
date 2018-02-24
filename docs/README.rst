@@ -10,7 +10,6 @@ How to Run Server
 #. :code:`$ ./manage.py runserver`
 #. Goto 127.0.0.1:8000
 
-{"patient_id":"1", "rxcui":"1", "name":"temp", "num_left":"3", "last_taken_time":"2002-03-11 00:00:00", "next_take_time":"2002-03-11 00:00:00", "taken":"1", "dosage":"3"}
 
 API Docs
 ========
@@ -91,14 +90,15 @@ Medicine Object
 ===============
 
 :attributes:
-  :id: int, ID of the medicine
+  :rxcui: int, ID of the medicine
+  :patient_id: int, ID of the patient
   :name: str, Name of the medicine
   :num_left: int, Number of doses left
   :dosage: str, dosage
   :last_taken_time: Datetime object, last time a patient took a medicine
   :next_take_time: Datetime object, next time a patient take a medicine
   :taken: boolean, if the patient took the medicine at last_time_taken
-  
+ 
 :methods:
   :to_string:
     :input: None
@@ -106,7 +106,7 @@ Medicine Object
   :from_string: 
     :input: A single string in JSON format, contains everything in attributes
     :returns: a Medicine object
-    
+:Sample String: {"patient_id":"1", "rxcui":"1", "name":"temp", "num_left":"3", "last_taken_time":"2002-03-11 00:00:00", "next_take_time":"2002-03-11 00:00:00", "taken":"1", "dosage":"3"}
 
 
 
