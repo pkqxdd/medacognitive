@@ -20,6 +20,7 @@ API Docs
 :Method: GET
 :Return: application/xml
 
+
 :Decription: Blank
 :Location: https://rxnav.nlm.nih.gov/REST/interaction/list?rxcuis=value
 :Method: GET
@@ -32,11 +33,15 @@ API Docs
 :template: patient-landing.html
 :Return: text/html
 
+
+
 :Decription: Doctor 
 :Location: /doctor/?name=doctorName
 :Method: GET
 :template: hospital-landing.html
 :Return: text/html
+
+
 
 :Decription: Doctor 
 :Location: /doctor/patient/?name=PatientName
