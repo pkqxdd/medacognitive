@@ -15,11 +15,34 @@ How to Run Server
 API Docs
 ========
 
+:Description: Blank 
 :Location: https://rxnav.nlm.nih.gov/REST/approximateTerm?term=value&maxEntries=yyy
 :Method: GET
 :Return: application/xml
 
-:Decripti
+:Decription: Blank
 :Location: https://rxnav.nlm.nih.gov/REST/interaction/list?rxcuis=value
 :Method: GET
 :Return: application/xml
+
+
+:Decription: Patient 
+:Location: /patient/?name=PatientName
+:Method: GET
+:template: patient-landing.html
+:Return: text/html
+
+:Decription: Doctor 
+:Location: /doctor/?name=doctorName
+:Method: GET
+:template: hospital-landing.html
+:Return: text/html
+
+:Decription: Doctor 
+:Location: /doctor/patient/?name=PatientName
+:Method: GET
+:template: hospital-patient.html
+:Return: text/html
+
+
+
