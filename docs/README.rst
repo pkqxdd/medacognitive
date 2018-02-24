@@ -75,6 +75,7 @@ Medicine Object
 ---------------
 
 :attricutes:
+  :id: int, ID of the medicine
   :name: str, Name of the medicine
   :num_left: int, Number of doses left
   :dosage: str, dosage
