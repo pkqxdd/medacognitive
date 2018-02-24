@@ -29,7 +29,7 @@ API Docs
 
 ---------------------
 
-:Description: Patient
+:Description: Patient profile from a patient's view 
 :Location: /patient/?name=PatientName
 :Method: GET
 :template: patient-landing.html
@@ -37,7 +37,7 @@ API Docs
 
 ---------------------
 
-:Decription: Doctor 
+:Decription: Doctor's view
 :Location: /doctor/?name=doctorName
 :Method: GET
 :template: hospital-landing.html
@@ -45,14 +45,29 @@ API Docs
 
 ---------------------
 
-:Decription: Doctor 
+:Decription: Patient profile from a doctor's view 
 :Location: /doctor/patient/?name=PatientName
 :Method: GET
 :template: hospital-profile.html
 :Return: text/html
 
+----------------------
+
+:Description: Update a medicine. Replace whatever is in the database with the incoming data
+:Location: /update
+:Method: POST
+:Accept: application/json
+  :Fields:
+    :patient_id: patient's id
+    :med: the data to be replaced with
+:Response:
+  :Type: text/plain
+  :Content: success
+
+
+
 Patient Object
---------------
+==============
 
 :attributes:
   :id: ID of the patient, start from 0
@@ -62,7 +77,7 @@ Patient Object
 :methods: None
 
 Doctor Object
--------------
+=============
 
 :attributes:
   :id: ID of the patient, start from 0
@@ -72,7 +87,7 @@ Doctor Object
 :methods: None
 
 Medicine Object
----------------
+===============
 
 :attricutes:
   :id: int, ID of the medicine
