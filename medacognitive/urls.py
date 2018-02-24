@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import home, hospital,patient_profile
+from .views import home, hospital,patient_profile,doctor_patient,doctor_profile
 from django.conf.urls.static import static
 from .settings import DEBUG,BASE_DIR
 import os
@@ -25,6 +25,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('hospital/', hospital),
     path('patient/',patient_profile),
+    path('doctor/patient/',doctor_patient),
+    path('doctor',doctor_profile),
     path('',home)
 ] \
               + static('css/',document_root=os.path.join(BASE_DIR,'css')) \
