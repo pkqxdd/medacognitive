@@ -58,7 +58,8 @@ API Docs
 :Accept: 
   :Type: application/json
   :Fields:
-    :med: the data to be replaced with, see the format below
+    :id: the patient ID
+    :meds: the data to be replaced with, see the format below
 :Response:
   :Type: text/plain
   :Content: success
