@@ -56,10 +56,11 @@ API Docs
 :Description: Update a medicine. Replace whatever is in the database with the incoming data
 :Location: /update
 :Method: POST
-:Accept: application/json
+:Accept: 
+  :Type: application/json
   :Fields:
     :patient_id: patient's id
-    :med: the data to be replaced with
+    :med: the data to be replaced with, see the format below
 :Response:
   :Type: text/plain
   :Content: success
