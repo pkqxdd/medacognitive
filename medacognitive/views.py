@@ -43,8 +43,37 @@ def home(request):
 def hospital(request):
     return render(request,'hospital-landing.html')
 
-def patient_profile(request):
+def doctor_profile(request):
+    try:
+        doctor_id = int(request.GET['id'])
+        doctor = Doctor.objects.get(id=doctor_id)
+    except Doctor.DoesNotExist:
+        raise Http404("Doctor record with ID %d does not exist" % doctor_id)
+    except Exception as msg:
+        raise Http404("Improperly formatted request: %s" % msg)
+    
+    return render(request, 'hospital-landing.html', context={doctor: doctor})
 
+def doctor_patient(request):
+    try:
+        doctor_id = int(request.GET['id'])
+        doctor = Doctor.objects.get(id=doctor_id)
+    except Doctor.DoesNotExist:
+        raise Http404("Doctor record with ID %d does not exist" % doctor_id)
+    except Exception as msg:
+        raise Http404("Improperly formatted request: %s" % msg)
+    
+    try:
+        patient_id=int(request.GET['id'])
+        patient=Patient.objects.get(id=patient_id)
+    except Patient.DoesNotExist:
+        raise Http404("Patient record with ID %d does not exist"%patient_id)
+    except Exception as msg:
+        raise Http404("Improperly formatted request: %s" % msg)
+
+    return render(request,'hospital-profile.html',context={doctor:doctor,patient:patient})
+
+def patient_profile(request):
     try:
         patient_id=int(request.GET['id'])
         patient=Patient.objects.get(id=patient_id)
