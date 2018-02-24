@@ -7,3 +7,4 @@ class Patient(models.Model):
     med_names = models.TextField("Current Medications")
     med_time = models.TextField("Time to take meds")
     med_left = models.TextField("How Much Left")
+    meds_taken = models.TextField("Meds Taken", null=True)
