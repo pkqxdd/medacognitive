@@ -60,7 +60,7 @@ def doctor_profile(request):
     except Exception as msg:
         raise Http404("Improperly formatted request: %s" % msg)
     
-    return render(request, 'hospital-landing.html', context={doctor: doctor})
+    return render(request, 'hospital-landing.html', context={'doctor': doctor})
 
 def doctor_patient(request):
     try:
@@ -79,7 +79,7 @@ def doctor_patient(request):
     except Exception as msg:
         raise Http404("Improperly formatted request: %s" % msg)
 
-    return render(request,'hospital-profile.html',context={doctor:doctor,patient:patient})
+    return render(request,'hospital-profile.html',context={'doctor':doctor,'patient':patient})
 
 def patient_profile(request):
     try:
@@ -90,4 +90,4 @@ def patient_profile(request):
     except Exception as msg:
         raise Http404("Improperly formatted request: %s" % msg)
     
-    return render(request,'patient-profile.html',context={patient:patient})
+    return render(request,'patient-profile.html',context={'patient':patient})
