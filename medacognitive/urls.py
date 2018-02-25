@@ -18,6 +18,7 @@ from django.urls import path
 from .views import home, hospital,patient_profile,doctor_patient,doctor_profile,update,meds
 from django.conf.urls.static import static
 from .settings import DEBUG,BASE_DIR
+from django.shortcuts import render
 import os
 
 
@@ -29,12 +30,14 @@ urlpatterns = [
     path('doctor/',doctor_profile),
     path('update/',update),
     path('meds/',meds),
+    path('sample',lambda req:render(req,'sample.html')),
     path('',home)
 ] \
               + static('css/',document_root=os.path.join(BASE_DIR,'css')) \
               + static('fonts/',document_root=os.path.join(BASE_DIR,'fonts')) \
               + static('js/',document_root=os.path.join(BASE_DIR,'js'))\
-              + static('img/',document_root=os.path.join(BASE_DIR,'img'))
+              + static('img/',document_root=os.path.join(BASE_DIR,'img'))\
+            
 
 
 

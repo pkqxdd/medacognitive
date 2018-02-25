@@ -10,7 +10,7 @@ from django.views import View
 
 
 def home(request):
-    return HttpResponseRedirect('/hospital')
+    return HttpResponseRedirect('/doctor/?id=1')
 
 def hospital(request):
     return render(request,'hospital-landing.html')
@@ -71,9 +71,10 @@ def meds(request):
 def update(request):
     if request.method=='POST':
         try:
-            med=Meds.from_string(request.POST["meds"])
-            patient=Patient.objects.get(id=med.patient_id)
-            patient.med=med.to_string()
+            patient_id=request.POST['id']
+            m=Meds.from_string(request.POST["meds"]) #verify data
+            patient=Patient.objects.get(id=patient_id)
+            patient.med=m
             patient.save()
         except Exception as msg:
             raise Http404("Improperly formatted input: %s" % msg)
