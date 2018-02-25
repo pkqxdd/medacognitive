@@ -23,10 +23,7 @@ function drawCharts() {
         ['ibuprofen', 105, 60],
         ['Tylenol', 137, 91],
         ['Lipitor', 66, 40],
-        ['Asprin', 103, 54],
-        ['Zocor', 100, 40],
-        ['Actos', 117, 96],
-        ['Panadol', 66, 32]
+        ['Asprin', 103, 54]
     ]);
     // set bar chart options
     var barOptions = {
