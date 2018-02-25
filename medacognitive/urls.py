@@ -36,6 +36,7 @@ urlpatterns = [
               + static('fonts/',document_root=os.path.join(BASE_DIR,'fonts')) \
               + static('js/',document_root=os.path.join(BASE_DIR,'js'))\
               + static('img/',document_root=os.path.join(BASE_DIR,'img'))\
+            +static('static/',document_root=os.path.join(BASE_DIR,'static'))
             
 
 
