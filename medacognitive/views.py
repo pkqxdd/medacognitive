@@ -26,7 +26,7 @@ def doctor_profile(request):
 
 def doctor_patient(request):
     try:
-        doctor_id = int(request.GET['id'])
+        doctor_id = int(request.GET['doctor_id'])
         doctor = Doctor.objects.get(id=doctor_id)
     except Doctor.DoesNotExist:
         raise Http404("Doctor record with ID %d does not exist" % doctor_id)
@@ -34,7 +34,7 @@ def doctor_patient(request):
         raise Http404("Improperly formatted request: %s" % msg)
     
     try:
-        patient_id=int(request.GET['id'])
+        patient_id = int(request.GET['patient_id'])
         patient=Patient.objects.get(id=patient_id)
     except Patient.DoesNotExist:
         raise Http404("Patient record with ID %d does not exist"%patient_id)

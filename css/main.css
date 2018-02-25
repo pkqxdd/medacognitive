@@ -1,9 +1,5 @@
 *{
-	font-family: "Raleway"";
-}
-
-span{
-
+    font-family: "Fira Sans";
 }
 
 body{
@@ -48,4 +44,70 @@ body{
     #search-wrap{
         width:100%;
     }
+}
+
+#prof {
+    margin-right: 100%;
+    margin-top: -20px;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 75px;
+    margin-left: 5px;
+    margin-bottom: -30px;
+    border: 2px solid #7abbdb;
+}
+
+#meds {
+    width: 100%;
+    text-align: center;
+}
+
+#mymeds {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.med {
+    background-color: white;
+    width: fit-content;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 10px;
+    padding-bottom: 10px;
+}
+
+.even_layout {
+    display: flex;
+    justify-content: center;
+}
+
+.med_doses {
+    color: #024690;
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+hr {
+    background: #7abbdb;
+    border: none;
+    height: 2px;
+}
+
+.med_name {
+    color: #024690;
+    font-size: 50px;
+    margin: 5px;
+}
+
+.button_wrap {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    outline: none;
 }

@@ -121,7 +121,7 @@
 			<section class="demo-2">
 				<div class="grid">
 					{%for patient in doctor.patients.all() %}
-						<a href="/patient/?id={{patient.id}}">
+                        <a href=/doctor/patient/?patient_id={{ patient.id }}&doctor_id={{ doctor.id }}>
 							<div class="box">
 								<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
 									<line class="top" x1="0" y1="0" x2="900" y2="0"/>

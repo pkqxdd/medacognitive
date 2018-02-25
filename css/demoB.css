@@ -99,6 +99,7 @@ a:hover, a:focus {
 section {
 	padding: 4em 2em;
 	text-align: center;
+
 }
 
 section h2 {
@@ -109,7 +110,8 @@ section h2 {
 
 .codrops-header + section {
 	padding-top: 1.5em;
-}
+    width: 200px;
+}	
 
 .related p {
 	font-size: 1.5em;
@@ -152,6 +154,7 @@ section h2 {
 
 	.codrops-icon span {
 		display: none;
-	}
+
+    }
 
 }

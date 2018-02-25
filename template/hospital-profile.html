@@ -10,212 +10,169 @@
 	<link rel="stylesheet" type="text/css" href="/css/demo.css" />
 	<link rel="stylesheet" type="text/css" href="/css/component.css" />
 	<link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/linegraph.css"/>
 	<link rel="stylesheet" type="text/css" href="/css/normalizeB.css" />
 	<link rel="stylesheet" type="text/css" href="/css/demoB.css" />
 	<link rel="stylesheet" type="text/css" href="/css/componentB.css" />
+    <link rel="stylesheet" type="text/css" href="/css/list.css"/>
+    <script
+            src="http://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
 	<!--[if IE]>
   	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<title>Medacognitive | Patient</title>
+    <title>Medacognitive | {{ name }}</title>
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
 	<link href="/css/main.css" rel="stylesheet">
 </head>
 <body>
-	<div id="header"> 
+<div id="header">
 		<div id="logo"> <span id="bracket">[</span><span id="med">Med</span><span id="cog">acognitive</span><span id="bracket">]</span></div>
 		<div id="search-wrap">
 		    <div id="morphsearch" class="morphsearch">
 				<form class="morphsearch-form">
-					<input class="morphsearch-input" type="search" placeholder="Search Patients..."/>
+                    <input class="morphsearch-input" id="mySearch" type="search" placeholder="Add Medication..."
+                           onkeydown="search(this)"/>
 					<button class="morphsearch-submit" type="submit">Search</button>
 				</form>
+                <script type="text/javascript">
+                    var searchtext = ""
+
+                    function search(ele) {
+                        if (event.key === 'Enter') {
+                            searchtext = ele.value;
+                        }
+                    }
+                </script>
 				<div class="morphsearch-content">
 					<div class="dummy-column">
-						<h2>Patients</h2>
-						<a class="dummy-media-object" href="http://twitter.com/SaraSoueidan">
-							<img class="round" src="http://0.gravatar.com/avatar/81b58502541f9445253f30497e53c280?s=50&d=identicon&r=G" alt="Sara Soueidan"/>
-							<h3>Sara Soueidan</h3>
+                        <h2>Medications</h2>
+                        <a class="dummy-media-object">
+                            <img class="round" src="img/meds.svg" alt="Med Pic"/>
+                            <h3>Tylenol</h3>
 						</a>
-						<a class="dummy-media-object" href="http://twitter.com/rachsmithtweets">
-							<img class="round" src="http://0.gravatar.com/avatar/48959f453dffdb6236f4b33eb8e9f4b7?s=50&d=identicon&r=G" alt="Rachel Smith"/>
-							<h3>Rachel Smith</h3>
+                        <a class="dummy-media-object">
+                            <img class="round" src="img/meds.svg" alt="Med Pic"/>
+                            <h3>Lipitor</h3>
 						</a>
-						<a class="dummy-media-object" href="http://www.twitter.com/peterfinlan">
-							<img class="round" src="http://0.gravatar.com/avatar/06458359cb9e370d7c15bf6329e5facb?s=50&d=identicon&r=G" alt="Peter Finlan"/>
-							<h3>Peter Finlan</h3>
+                        <a class="dummy-media-object">
+                            <img class="round" src="img/meds.svg" alt="Med Pic"/>
+                            <h3>Zocor</h3>
 						</a>
-						<a class="dummy-media-object" href="http://www.twitter.com/pcridesagain">
-							<img class="round" src="http://1.gravatar.com/avatar/db7700c89ae12f7d98827642b30c879f?s=50&d=identicon&r=G" alt="Patrick Cox"/>
-							<h3>Patrick Cox</h3>
+                        <a class="dummy-media-object">
+                            <img class="round" src="img/meds.svg" alt="Med Pic"/>
+                            <h3>Asprin</h3>
 						</a>
-						<a class="dummy-media-object" href="https://twitter.com/twholman">
-							<img class="round" src="http://0.gravatar.com/avatar/cb947f0ebdde8d0f973741b366a51ed6?s=50&d=identicon&r=G" alt="Tim Holman"/>
-							<h3>Tim Holman</h3>
+                        <a class="dummy-media-object">
+                            <img class="round" src="img/meds.svg" alt="Med Pic"/>
+                            <h3>Actos</h3>
 						</a>
-						<a class="dummy-media-object" href="https://twitter.com/shaund0na">
-							<img class="round" src="http://1.gravatar.com/avatar/9bc7250110c667cd35c0826059b81b75?s=50&d=identicon&r=G" alt="Shaun Dona"/>
-							<h3>Shaun Dona</h3>
+                        <a class="dummy-media-object">
+                            <img class="round" src="img/meds.svg" alt="Med Pic"/>
+                            <h3>ibuprofen</h3>
 						</a>
 					</div>
 					<div class="dummy-column">
 						<h2>Most Searched</h2>
-						<a class="dummy-media-object" href="http://twitter.com/SaraSoueidan">
-							<img class="round" src="http://0.gravatar.com/avatar/81b58502541f9445253f30497e53c280?s=50&d=identicon&r=G" alt="Sara Soueidan"/>
-							<h3>Sara Soueidan</h3>
+                        <a class="dummy-media-object">
+                            <img class="round" src="img/meds.svg" alt="Med Pic"/>
+                            <h3>Tylenol</h3>
 						</a>
-						<a class="dummy-media-object" href="http://twitter.com/rachsmithtweets">
-							<img class="round" src="http://0.gravatar.com/avatar/48959f453dffdb6236f4b33eb8e9f4b7?s=50&d=identicon&r=G" alt="Rachel Smith"/>
-							<h3>Rachel Smith</h3>
+                        <a class="dummy-media-object">
+                            <img class="round" src="img/meds.svg" alt="Med Pic"/>
+                            <h3>Lipitor</h3>
 						</a>
-						<a class="dummy-media-object" href="http://www.twitter.com/peterfinlan">
-							<img class="round" src="http://0.gravatar.com/avatar/06458359cb9e370d7c15bf6329e5facb?s=50&d=identicon&r=G" alt="Peter Finlan"/>
-							<h3>Peter Finlan</h3>
+                        <a class="dummy-media-object">
+                            <img class="round" src="img/meds.svg" alt="Med Pic"/>
+                            <h3>Zocor</h3>
 						</a>
-						<a class="dummy-media-object" href="http://www.twitter.com/pcridesagain">
-							<img class="round" src="http://1.gravatar.com/avatar/db7700c89ae12f7d98827642b30c879f?s=50&d=identicon&r=G" alt="Patrick Cox"/>
-							<h3>Patrick Cox</h3>
+                        <a class="dummy-media-object">
+                            <img class="round" src="img/meds.svg" alt="Med Pic"/>
+                            <h3>Asprin</h3>
 						</a>
-						<a class="dummy-media-object" href="https://twitter.com/twholman">
-							<img class="round" src="http://0.gravatar.com/avatar/cb947f0ebdde8d0f973741b366a51ed6?s=50&d=identicon&r=G" alt="Tim Holman"/>
-							<h3>Tim Holman</h3>
+                        <a class="dummy-media-object">
+                            <img class="round" src="img/meds.svg" alt="Med Pic"/>
+                            <h3>Actos</h3>
 						</a>
-						<a class="dummy-media-object" href="https://twitter.com/shaund0na">
-							<img class="round" src="http://1.gravatar.com/avatar/9bc7250110c667cd35c0826059b81b75?s=50&d=identicon&r=G" alt="Shaun Dona"/>
-							<h3>Shaun Dona</h3>
+                        <a class="dummy-media-object">
+                            <img class="round" src="img/meds.svg" alt="Med Pic"/>
+                            <h3>ibuprofen</h3>
 						</a>
 					</div>
 					<div class="dummy-column">
 						<h2>Recent</h2>
-						<a class="dummy-media-object" href="http://twitter.com/SaraSoueidan">
-							<img class="round" src="http://0.gravatar.com/avatar/81b58502541f9445253f30497e53c280?s=50&d=identicon&r=G" alt="Sara Soueidan"/>
-							<h3>Sara Soueidan</h3>
+                        <a class="dummy-media-object">
+                            <img class="round" src="img/meds.svg" alt="Med Pic"/>
+                            <h3>Tylenol</h3>
 						</a>
-						<a class="dummy-media-object" href="http://twitter.com/rachsmithtweets">
-							<img class="round" src="http://0.gravatar.com/avatar/48959f453dffdb6236f4b33eb8e9f4b7?s=50&d=identicon&r=G" alt="Rachel Smith"/>
-							<h3>Rachel Smith</h3>
+                        <a class="dummy-media-object">
+                            <img class="round" src="img/meds.svg" alt="Med Pic"/>
+                            <h3>Lipitor</h3>
 						</a>
-						<a class="dummy-media-object" href="http://www.twitter.com/peterfinlan">
-							<img class="round" src="http://0.gravatar.com/avatar/06458359cb9e370d7c15bf6329e5facb?s=50&d=identicon&r=G" alt="Peter Finlan"/>
-							<h3>Peter Finlan</h3>
+                        <a class="dummy-media-object">
+                            <img class="round" src="img/meds.svg" alt="Med Pic"/>
+                            <h3>Zocor</h3>
 						</a>
-						<a class="dummy-media-object" href="http://www.twitter.com/pcridesagain">
-							<img class="round" src="http://1.gravatar.com/avatar/db7700c89ae12f7d98827642b30c879f?s=50&d=identicon&r=G" alt="Patrick Cox"/>
-							<h3>Patrick Cox</h3>
+                        <a class="dummy-media-object">
+                            <img class="round" src="img/meds.svg" alt="Med Pic"/>
+                            <h3>Asprin</h3>
 						</a>
-						<a class="dummy-media-object" href="https://twitter.com/twholman">
-							<img class="round" src="http://0.gravatar.com/avatar/cb947f0ebdde8d0f973741b366a51ed6?s=50&d=identicon&r=G" alt="Tim Holman"/>
-							<h3>Tim Holman</h3>
+                        <a class="dummy-media-object">
+                            <img class="round" src="img/meds.svg" alt="Med Pic"/>
+                            <h3>Actos</h3>
 						</a>
-						<a class="dummy-media-object" href="https://twitter.com/shaund0na">
-							<img class="round" src="http://1.gravatar.com/avatar/9bc7250110c667cd35c0826059b81b75?s=50&d=identicon&r=G" alt="Shaun Dona"/>
-							<h3>Shaun Dona</h3>
+                        <a class="dummy-media-object">
+                            <img class="round" src="img/meds.svg" alt="Med Pic"/>
+                            <h3>ibuprofen</h3>
 						</a>
 					</div>
 				</div><!-- /morphsearch-content -->
 				<span class="morphsearch-close"></span>
 			</div><!-- /morphsearch -->
 		</div>
-	</div>
-			<div id="container" class="container">
-			
-			<section class="demo-2">
-				<div class="grid">
-					<div class="box">
-						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-							<line class="top" x1="0" y1="0" x2="900" y2="0"/>
-							<line class="left" x1="0" y1="460" x2="0" y2="-920"/>
-							<line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
-							<line class="right" x1="300" y1="0" x2="300" y2="1380"/>
-						</svg>
-						<h3>J</h3>
-						<span>2012</span>
-						<span>Walnut, Pineapple</span>
-					</div>
-					<div class="box">
-						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-							<line class="top" x1="0" y1="0" x2="900" y2="0"/>
-							<line class="left" x1="0" y1="460" x2="0" y2="-920"/>
-							<line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
-							<line class="right" x1="300" y1="0" x2="300" y2="1380"/>
-						</svg>
-						<h3>I</h3>
-						<span>2013</span>
-						<span>Curry, Beancurd</span>
-					</div>
-					<div class="box">
-						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-							<line class="top" x1="0" y1="0" x2="900" y2="0"/>
-							<line class="left" x1="0" y1="460" x2="0" y2="-920"/>
-							<line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
-							<line class="right" x1="300" y1="0" x2="300" y2="1380"/>
-						</svg>
-						<h3>C</h3>
-						<span>2014</span>
-						<span>Lettuce, Asparagus</span>
-					</div>
-					<div class="box">
-						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-							<line class="top" x1="0" y1="0" x2="900" y2="0"/>
-							<line class="left" x1="0" y1="460" x2="0" y2="-920"/>
-							<line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
-							<line class="right" x1="300" y1="0" x2="300" y2="1380"/>
-						</svg>
-						<h3>C</h3>
-						<span>2014</span>
-						<span>Lettuce, Asparagus</span>
-					</div>
-					<div class="box">
-						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-							<line class="top" x1="0" y1="0" x2="900" y2="0"/>
-							<line class="left" x1="0" y1="460" x2="0" y2="-920"/>
-							<line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
-							<line class="right" x1="300" y1="0" x2="300" y2="1380"/>
-						</svg>
-						<h3>C</h3>
-						<span>2014</span>
-						<span>Lettuce, Asparagus</span>
-					</div>
-					<div class="box">
-						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-							<line class="top" x1="0" y1="0" x2="900" y2="0"/>
-							<line class="left" x1="0" y1="460" x2="0" y2="-920"/>
-							<line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
-							<line class="right" x1="300" y1="0" x2="300" y2="1380"/>
-						</svg>
-						<h3>C</h3>
-						<span>2014</span>
-						<span>Lettuce, Asparagus</span>
-					</div>
-					<div class="box">
-						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-							<line class="top" x1="0" y1="0" x2="900" y2="0"/>
-							<line class="left" x1="0" y1="460" x2="0" y2="-920"/>
-							<line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
-							<line class="right" x1="300" y1="0" x2="300" y2="1380"/>
-						</svg>
-						<h3>C</h3>
-						<span>2014</span>
-						<span>Lettuce, Asparagus</span>
-					</div>
-					<div class="box">
-						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-							<line class="top" x1="0" y1="0" x2="900" y2="0"/>
-							<line class="left" x1="0" y1="460" x2="0" y2="-920"/>
-							<line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
-							<line class="right" x1="300" y1="0" x2="300" y2="1380"/>
-						</svg>
-						<h3>C</h3>
-						<span>2014</span>
-						<span>Lettuce, Asparagus</span>
-					</div>
-					
-				</div><!-- /grid -->
-			</section>
 
-		</div><!-- /container -->
-	<div id="footer"></div>
-	<div class="overlay"></div>
-	<script src="js/classie.js"></script>
+
+</div>
+
+
+<div id="container" class="cont1">
+			<section class="demo-2">
+
+                <div class="box" id="prof">
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+							<line class="top" x1="0" y1="0" x2="900" y2="0"/>
+							<line class="left" x1="0" y1="460" x2="0" y2="-920"/>
+							<line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
+							<line class="right" x1="300" y1="0" x2="300" y2="1380"/>
+						</svg>
+                    <h3 align="center">{{ patient.first_name[0].upper()}}</h3>
+                    <span align="center">2014</span>
+                    <span align="center">{{ patient.last_name }}, {{ patient.first_name }}</span>
+                </div>
+
+            </section>
+
+</div><!-- /container -->
+
+</container>
+<div class="barChart" id="bar-chart"></div>
+<div class="lineChart" id="line-chart"></div>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+</div>
+</article>
+</div>
+</div>
+</div>
+
+
+<div id="footer"></div>
+
+<div class="overlay"></div>
+<script src="/js/classie.js"></script>
+<script src="/js/listh.js"></script>
+<script src="/js/linegraph.js"></script>
 	<script>
 			(function() {
 			    var cont = document.getElementById( 'container' )
@@ -232,7 +189,7 @@
 						if( isOpen ) {
 							classie.remove( morphSearch, 'open' );
 
-							// trick to hide input text once the search overlay closes 
+                            // trick to hide input text once the search overlay closes
 							// todo: hardcoded times, should be done after transition ends
 							if( input.value !== '' ) {
 								setTimeout(function() {
@@ -243,8 +200,8 @@
 									}, 300 );
 								}, 500);
 							}
-							
-							input.blur();
+
+                            input.blur();
 							classie.remove( cont, 'hide');
 						}
 						else {
@@ -273,5 +230,6 @@
 				morphSearch.querySelector( 'button[type="submit"]' ).addEventListener( 'click', function(ev) { ev.preventDefault(); } );
 			})();
 		</script>
+
 </body>
 </html>

@@ -102,7 +102,12 @@
 
 /* Alternatives */
 
+.cont1 {
+    position: absolute;
+}
+
 /* Color */
+
 .demo-2 .box {
 	box-shadow: inset 0 0 0 10px #E6E6E6;
 }
