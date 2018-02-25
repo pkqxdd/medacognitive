@@ -1,9 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Medacognitive | Your Profile</title>
+    <meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:100,700,800' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="/css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="/css/component.css" />
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/normalizeB.css" />
+	<link rel="stylesheet" type="text/css" href="/css/demoB.css" />
+	<link rel="stylesheet" type="text/css" href="/css/componentB.css" />
+	<!--[if IE]>
+  	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<title>Medacognitive | {{name}}</title>
+	<!--<script   src="http://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>	-->
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+	<!--<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>-->
+	<link href="/css/main.css" rel="stylesheet">
+	<link href="/css/button.css" rel="stylesheet">
+	<script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
+	<div id="header">
+		<div id="logo"> <span id="bracket">[</span><span id="med">Med</span><span id="cog">acognitive</span><span id="bracket">]</span></div>
+	</div>
+
+			<div id="container" class="even_layout">
+
+					<div id="meds">
+						<h3 id="mymeds">My Medications</h3>
+						<div class="med">
+							<h5 class="med_name">Tide Pods</h5>
+							<hr>
+							<div>
+								<img class="circle" src="/img/pills3.svg"></img><span class="med_doses">Doses Remaining: <span class="dose">30</span> </span>
+							</div>
+							<div id="flipC">
+								<div class="button_wrap front">
+									<button class="btn btn--stripe btn--radius">Take Medicine</button>
+								</div>
+								<div class="button_wrap back taken">
+									<button class="btn btn--stripe btn--radius">Medicine Taken</button>
+								</div>
+								<script type="text/javascript">
+								$(document).ready(function(){
+									$(".back").hide()
+									$(".front").on("click", function(e){
+										$(this).hide()
+										$(this).parent().find(".back").show()
+									})
+								})
+								</script>
+							</div>
+						</div>
+
+						<div class="med">
+							<h5 class="med_name">Tide Pods</h5>
+							<hr>
+							<div>
+								<img class="circle" src="/img/pills3.svg"></img><span class="med_doses">Doses Remaining: <span class="dose">30</span> </span>
+							</div>
+							<div id="flipC">
+								<div class="button_wrap front">
+									<button class="btn btn--stripe btn--radius">Take Medicine</button>
+								</div>
+								<div class="button_wrap back taken">
+									<button class="btn btn--stripe btn--radius">Medicine Taken</button>
+								</div>
+								<script type="text/javascript">
+								$(document).ready(function(){
+									$(".back").hide()
+									$(".front").on("click", function(e){
+										$(this).hide()
+										$(this).parent().find(".back").show()
+										$(this).parent().parent().find(".dose").text(parseInt($(this).parent().parent().find(".dose").text()) -1)
+									})
+								})
+								</script>
+							</div>
+						</div>
+					</div>
+			</div>
+
+
+		</div><!-- /container -->
+	<div id="footer"></div>
+	<div class="overlay"></div>
+	<script src="/js/classie.js"></script>
+	<!--<script src="/js/linegraph.js"></script>-->
+
 
 </body>
 </html>
