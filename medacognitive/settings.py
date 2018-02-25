@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'w7*+9l#z@@$q#j)p4x$dkak9s5c!+es5b2+7cg)6^5_k@%a5v+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["67.205.156.246",".medacognitve.tech","127.0.0.1"]
+ALLOWED_HOSTS = ["67.205.156.246",".medacognitive.tech","127.0.0.1"]
 
 
 # Application definition
