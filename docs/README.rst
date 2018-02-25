@@ -7,7 +7,8 @@ How to Run Server
 =================
 
 #. ``cd`` into the folder
-#. :code:`$ ./manage.py runserver`
+#. Install ``django``, ``jinja2``, ``django-cors-headers`` with ``pip``
+#. :code:`$ python3.6 ./manage.py runserver`
 #. Goto 127.0.0.1:8000
 
 
