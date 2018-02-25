@@ -12,8 +12,6 @@ from django.views import View
 def home(request):
     return HttpResponseRedirect('/doctor/?id=1')
 
-def hospital(request):
-    return render(request,'hospital-landing.html')
 
 def doctor_profile(request):
     try:
