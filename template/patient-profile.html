@@ -47,18 +47,20 @@
 								<div class="button_wrap back taken">
 									<button class="btn btn--stripe btn--radius">Medicine Taken</button>
 								</div>
-								<script type="text/javascript">
+
+							</div>
+						</div>
+					    {%endfor%}
+                    <script type="text/javascript">
 								$(document).ready(function(){
 									$(".back").hide()
 									$(".front").on("click", function(e){
 										$(this).hide()
 										$(this).parent().find(".back").show()
+										$(this).parent().parent().find(".dose").text(parseInt($(this).parent().parent().find(".dose").text()) -1)
 									})
 								})
 								</script>
-							</div>
-						</div>
-					    {%endfor%}
 
 
 
