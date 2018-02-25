@@ -110,7 +110,7 @@ section h2 {
 
 .codrops-header + section {
 	padding-top: 1.5em;
-    width: 200px;
+	width:200px;
 }	
 
 .related p {
@@ -155,6 +155,6 @@ section h2 {
 	.codrops-icon span {
 		display: none;
 
-    }
+	}
 
 }
